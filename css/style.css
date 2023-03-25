@@ -1,0 +1,245 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+:root{
+    
+    --main-background: hsl(222, 26%, 31%);
+    --toggle-background-keypad-background: hsl(223, 31%, 20%);
+    --screen-background: hsl(224, 36%, 15%);
+    
+    --key--background: hsl(225, 21%, 49%);
+    --key--shadow: hsl(224, 28%, 35%);
+    --key-background-toggle: hsl(6, 63%, 50%);
+    --key---shadow: hsl(6, 70%, 34%);
+    --key-background: hsl(30, 25%, 89%);
+    --key-shadow: hsl(28, 16%, 65%);
+
+    --button-text: hsl(221, 14%, 31%);
+    --White-text: hsl(0, 0%, 100%);
+    --White-button-text:hsl(0, 0%, 100%);
+    --button-equal:hsl(0, 0%, 100%);
+
+}
+.Theme2{
+    --main-background: hsl(0, 0%, 90%);
+    --toggle-background-keypad-background: hsl(0, 5%, 81%);
+    --screen-background: hsl(0, 0%, 93%);
+    
+    --key--background: hsl(185, 42%, 37%);
+    --key--shadow: hsl(185, 58%, 25%);
+    --key-background-toggle:  hsl(25, 98%, 40%);
+    --key---shadow: hsl(25, 99%, 27%);
+    --key-background: hsl(45, 7%, 89%);
+    --key-shadow:  hsl(35, 11%, 61%);
+
+    --button-text: hsl(60, 10%, 19%);
+    --White-text: hsl(60, 10%, 19%);
+    --White-button-text:hsl(0, 0%, 100%);
+    --button-equal:hsl(0, 0%, 100%);
+}
+.Theme3{
+    --main-background: hsl(268, 75%, 9%);
+    --toggle-background-keypad-background: hsl(268, 71%, 12%);
+    --screen-background: hsl(268, 71%, 12%);
+    
+    --key--background: hsl(281, 89%, 26%);
+    --key--shadow: hsl(285, 91%, 52%);
+    --key-background-toggle:   hsl(176, 100%, 44%);
+    --key---shadow: hsl(177, 92%, 70%);
+    --key-background: hsl(268, 47%, 21%);
+    --key-shadow:  hsl(290, 70%, 36%);
+
+    --button-text: hsl(52, 100%, 62%);
+    --White-text:hsl(52, 100%, 62%);
+    --White-button-text: hsl(0, 0%, 100%);
+    --button-equal:hsl(198, 20%, 13%);
+}
+body{
+    background-color: var(--main-background);
+    padding: 2rem 1rem;
+    width: 100%;
+    height: 100%;
+}
+header{
+    padding: 0.5rem 1rem;
+    max-width: 100%;
+    margin: 1.25rem auto;
+}
+header .heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--White-text);
+    height: auto;
+}
+header .heading h1{
+    font-size: 2.8rem;
+}
+header .heading .Theme{
+    display: flex ;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.875rem;
+}
+header .heading .Theme .theme{
+    font-size: 1rem;
+    align-self: flex-end;
+    padding-block-end: 1rem;
+}
+.theNumber{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block-end: 0.5rem;
+    padding: 0 1rem;
+}
+.theme-toggle input{
+    -webkit-appearance: none;
+    background-color: var(--screen-background);
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    padding: 0.5rem;
+    width: 90px;
+    outline: none;
+    border: none;
+}
+.theme-toggle input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background-color: var(--key-background-toggle);
+    border-radius:50% ;
+    -webkit-border-radius:50% ;
+    -moz-border-radius:50% ;
+    -ms-border-radius:50% ;
+    -o-border-radius:50% ;
+    cursor: pointer;
+}
+.screen{
+    padding: 0.5rem 1rem;
+    width: 100%;
+    margin: 1.25rem auto;
+
+}
+.screen #result{
+    background-color: var(--screen-background);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    height: 90px;
+    color: var(--White-text);
+    text-align: right;
+    padding: 0.5rem 1.3rem;
+    font-size: 2.6rem;
+}
+.screen #result:is(:hover,:focus){
+    outline: none;
+    border: none;
+}
+main{
+    margin: 1.25rem auto;
+    padding: 0.5rem 1rem;
+    width: 100%;
+}
+main .calculator{
+    max-width: 100%;
+    background-color: var(--toggle-background-keypad-background);
+    padding: 1rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4,minmax(50px,1fr));
+    gap: 20px;
+}
+main .calculator button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border-radius: 0.2rem;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
+    border: none;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--button-text);
+    background-color: var(--key-background);
+    box-shadow: 0px 3px 0px 0px var(--key-shadow);
+    cursor: pointer;
+}
+main .calculator button#del{
+    background-color: var(--key--background);
+    color: var(--White-button-text);
+    box-shadow: 0px 3px 0px 0px var(--key--shadow);
+    font-size: 1.2rem;
+
+}
+main .calculator button#reset{
+    grid-column: 1/3;
+    color: var(--White-button-text);
+    background-color: var(--key--background);
+    box-shadow: 0px 3px 0px 0px var(--key--shadow);
+    font-size: 1.2rem;
+}
+main .calculator button#equal{
+    grid-column: 3/5;
+    color: var(--button-equal);
+    background-color: var(--key-background-toggle);
+    box-shadow: 0px 3px 0px 0px var(--key---shadow);
+}
+@media screen and (max-width:768px){
+    
+    main,header,.screen{
+        max-width: 400px;
+    }
+}
+@media screen and (min-width:769px){
+    main,header,.screen{
+        max-width: 500px;
+    }
+    main .calculator{
+        grid-template-columns: repeat(4,minmax(60px,1fr));
+    }
+    main .calculator button{
+        height: 60px;
+    }
+}
+@media screen and (max-width:300px){
+    header,main,.screen{
+        padding: 0.5rem 0;
+    }
+    main,header,.screen{
+        max-width: 270px;
+    }
+    main .calculator{
+        grid-template-columns: repeat(4,minmax(40px,1fr));
+        gap: 15px;
+    }
+    main .calculator button{
+        height: 40px;
+    }
+    header .heading h1{
+    font-size: 2rem;
+}
+    header .heading .Theme .theme{
+        font-size: 0.7rem;
+}
+}

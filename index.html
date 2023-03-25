@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+  <!-- -----------font-google------------------------ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900;1000&family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+</head>
+<body>
+  
+  <header>
+    <div class="heading">
+      <h1>calc</h1>
+      <div class="Theme">
+        <p class="theme">THEME</p>
+        <div class="desingToggle">
+          <div class="theNumber">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+          </div>
+          <div class="theme-toggle">
+              <input type="range" name="" id="range" min="0" max="2" step="1" class="range__option" value="0">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="screen">
+      <input type="text"   id="result">
+  </div>
+  <main>
+    <div class="calculator">
+      <button class="box number" value="7">7</button>
+      <button class="box number" value="8">8</button>
+      <button class="box number" value="9">9</button>
+      <button class="box " id="del" value="del">DEL</button>
+      <button class="box number" value="4">4</button>
+      <button class="box number" value="5">5</button>
+      <button class="box number" value="6">6</button>
+      <button class="box operator" id="plus" value="+">+</button>
+      <button class="box number" value="1">1</button>
+      <button class="box number" value="2">2</button>
+      <button class="box number" value="3">3</button>
+      <button class="box operator" id="minus" value="-">-</button>
+      <button class="box operator" id="comma" value=".">.</button>
+      <button class="box number" value="0">0</button>
+      <button class="box operator" id="devide" value="/">/</button>
+      <button class="box operator" id="multiply" value="*">x</button>
+      <button class="box" id="reset" value="reset">RESET</button>
+      <button class="box equal" id="equal">=</button>
+    </div>
+  </main>
+</body>
+
+</html>
